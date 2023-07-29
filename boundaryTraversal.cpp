@@ -21,6 +21,13 @@
 class Solution {
 public:
 
+	bool isLeaf(Node* node)
+	{
+		// leaf node does not have anything on their left and right i.e., both sides are NULL
+		if(!node->left && !node->right) return true;
+		else return false;
+	}
+
 	void getLeftSide(vector<int>&result, Node*temp)
 	{
 		if(temp == NULL) return;
